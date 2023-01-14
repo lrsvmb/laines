@@ -3,13 +3,13 @@
 
 enum Animation
 {
-    ANIM_NONE,
-    ANIM_RAINBOW,
-    ANIM_FADE,
-    ANIM_BOUNCE,
-    ANIM_RANDOM,
-    ANIM_PONG,
-    ANIM_WAVE,
+    NONE,
+    RAINBOW,
+    FADE,
+    BOUNCE,
+    RANDOM,
+    PONG,
+    WAVE,
 };
 
 #endif

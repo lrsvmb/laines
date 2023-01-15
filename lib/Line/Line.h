@@ -13,7 +13,10 @@ typedef struct Line
 {
     LineSegment segments[LINE_SEGMENT_COUNT];
     Animation animation;
+    uint8_t brightness;
 } Line;
+
+Line line;
 
 // ---------- Functions ----------
 void line_init(Line *line);
@@ -32,5 +35,11 @@ LineSegment *line_getSegmentById(Line *line, uint8_t id);
 LineSegment *line_getSegmentByColor(Line *line, CRGB color);
 // Color
 CRGB line_getAverageColor(Line *line);
+void line_setAverageColor(Line *line, CRGB color);
+void line_setColor(Line *line, CRGB color);
+void line_setColor(Line *line, int r, int g, int b);
+// Brightness
+uint8_t line_getBrightness(Line *line);
+void line_setBrightness(Line *line, uint8_t brightness);
 
 #endif

@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "Line.h"
+#include "LineServer.h"
 
 void setup()
 {

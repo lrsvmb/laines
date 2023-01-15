@@ -144,3 +144,34 @@ CRGB line_getAverageColor(Line *line)
     b /= LINE_SEGMENT_COUNT;
     return CRGB(r, g, b);
 }
+
+void line_setAverageColor(Line *line, CRGB color)
+{
+    // TODO set the average color in all segments
+}
+
+void line_setColor(Line *line, CRGB color)
+{
+    for (uint8_t i = 0; i < LINE_SEGMENT_COUNT; i++)
+    {
+        ls_setColor(&line->segments[i], color);
+    }
+}
+
+void line_setColor(Line *line, int r, int g, int b)
+{
+    line_setColor(line, CRGB(r, g, b));
+}
+
+// Brightness
+
+uint8_t line_getBrightness(Line *line)
+{
+    return line->brightness;
+}
+
+void line_setBrightness(Line *line, uint8_t brightness)
+{
+    FastLED.setBrightness(brightness);
+    line->brightness = brightness;
+}

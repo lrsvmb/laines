@@ -15,7 +15,7 @@ CRGB ls_getColor(LineSegment *segment)
     return segment->color;
 }
 
-void ls_setId(LineSegment *segment, int id)
+void ls_setId(LineSegment *segment, uint8_t id)
 {
     segment->id = id;
 }
